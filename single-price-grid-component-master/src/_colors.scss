@@ -1,0 +1,25 @@
+@function colors($color, $opacity: 1) {
+  @if $color == 'first' {
+    @return rgba(192, 223, 52, $opacity)
+  };
+
+  @if $color == 'secund' {
+    @return rgba(42, 178, 175, $opacity)
+  };
+
+  @if $color == 'third' {
+    @return rgba(229, 239, 245, $opacity)
+  };
+
+  @if $color == 'white' {
+    @return rgba(255, 255, 255, $opacity)
+  };
+
+  @if $color == 'black' {
+    @return rgba(0, 0, 0, $opacity)
+  };
+
+  @if $color == 'base' {
+    @return rgba(152, 166, 189, $opacity)
+  };
+}
