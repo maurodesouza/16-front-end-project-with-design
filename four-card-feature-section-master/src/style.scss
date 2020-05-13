@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import './config';
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: $darkBlue;
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  background: $lightGray;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 8rem 3rem 0;
+
+  h1 {
+    font-weight: 200;
+    font-size: 3.6rem;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+    line-height: 5rem;
+  }
+  
+  p {
+    color: $grayishBlue;
+    margin-top: 1rem;
+    max-width: 50rem;
+    line-height: 2.5rem;
+  }
+}
+
+.wrapper-cards {
+  display: flex;
+  align-items: center;
+
+  margin-top: 6rem;
+}
+
+.wrapper-cards-column {
+  margin: 0 3rem;
+}
+
+.card {
+  flex: 1;
+  background: $white;
+  border-radius: .5rem;
+  padding: 3rem;
+  text-align: left;
+  max-width: 35rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 .2rem .8rem 0 transparentize($blue, 0.9), 0 .6rem 2rem 0 transparentize($grayishBlue, 0.8);
+  border-top: .35rem solid;
+  display: flex;
+  flex-direction: column;
+
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    max-width: 90%;
+    letter-spacing: .05rem;
+  }
+
+  span {
+    margin-top: 3rem;
+    align-self: flex-end;
+  }
+}
+
+.c-one {
+  border-top-color: $cyan;
+}
+
+.c-two {
+  border-top-color: $red;
+}
+
+.c-three {
+  border-top-color: $orange;
+}
+
+.c-four {
+  border-top-color: $blue;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+
+  a {
+    color: $orange;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .wrapper-cards {
+    flex-direction: column;
+  }
+
+  .wrapper-cards-column {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .container {
+
+    h1, h2 {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 8px;
+  }
+
+  .card {
+    p {
+      font-size: 1.5rem;
+      max-width: 100%;
+    }
+
+    span img {
+      width: 80%;
+    }
+  }
+}
