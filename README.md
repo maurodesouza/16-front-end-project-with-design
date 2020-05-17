@@ -16,7 +16,8 @@ Meu principal objetivo :dart: com esses projetos é melhorar minhas skills com c
 # Projetos #
 **1°** - [single-price-grid-component-master](#single-price-grid-component-master)\
 **2°** - [four-card-feature-section-master](#four-card-feature-section-master)\
-**3°** - [huddle-landing-page-with-single-introductory-section](#huddle-landing-page-with-single-introductory-section)
+**3°** - [huddle-landing-page-with-single-introductory-section](#huddle-landing-page-with-single-introductory-section)\
+**4°** - [base-apparel-coming-soon](#base-apparel-coming-soon)
 
 # single-price-grid-component-master #
 
@@ -100,6 +101,51 @@ Se quiser ver como ficaram os arquivos, [clique aqui](https://github.com/maurode
 Pra fazer esse layout, utilizei uma `section(container)` para centralizar todo o conteúdo, coloquei a imagem e os textos dentro de uma `div(container-content)` com *display flex*, para poder deixar eles lado a lado e para os social icons, usei uma `div(container-icons)` com *display flex* e *justify-content flex-end* :ok_hand::ok_hand:
 
 E para deixar responsivo, coloquei *flex-direction column* no `container-content` e *justity-content center* no `container-icons`, também diminui um pouco o tamanho da logo, da imagem e das fontes!
+
+[Voltar ao início](#top)
+
+# base-apparel-coming-soon #
+
+![Design base-apparel-coming-soon](./base-apparel-coming-soon/design/desktop-preview.jpg)
+
+Para o quarto projeto, temos esse layout acima :arrow_up::arrow_up: e suas especificações eram:
+
+- Deixar o layout responsivo;
+- Colocar um efeito de **Hover** em todos os elementos interativos;
+- Receber uma mensagem de erro no submit do form se:
+  - O campo do input estiver vazio;
+  - O email não tiver formatado corretamente;
+
+Para fazer ele, utilizei o [Gulp](https://gulpjs.com), [Pug :dog:](https://pugjs.org/language/tags.html) para o HTML e para os estilos, o [Less](http://lesscss.org) :+1::+1:
+
+Para ver como ficou o resultado, [clique aqui](https://maurodesouza.github.io/16-front-end-project-with-design/base-apparel-coming-soon/dist/index.html) :point_left::point_left:
+
+Se quiser ver como ficaram os arquivos, [clique aqui](https://github.com/maurodesouza/16-front-end-project-with-design/tree/master/base-apparel-coming-soon/src) :point_left::point_left:
+
+![base-apparel-coming-soon app](./.github/base-apparel-coming-soon.gif)
+
+Nesse layout eu senti um pouco mais de dificuldade por causa da imagem, principalmente para deixar responsivo :sleeping::sleeping:
+
+Para fazer ele, utilizei uma `section(container)` com um *max-width 1440px* para deixar todo conteúdo centralizado e também usei um *display grid* com duas colunas.
+
+Para deixar responsivo, passei o `container` para *display flex* com `flex-direction column` e `align-items center` :ok_hand::ok_hand:
+
+Para fazer a parte da 'mensagem de erro', adicionei um *event listener* de *submit* no form, que verifica se a formatação do email está correta através de uma regex `/\S+@\S+\.\S+/`, e também se o input esta vazio. Se cair em alguma dessas verificações, é adicionado uma classe de 'erro' no input.
+
+![base-apparel-coming-soon input error git](./.github/base-apparel-coming-soon-input-error.gif)
+
+Também criei um script para corrigir a imagem de background que coloquei no body, que dependendo se tinha ou não scrollbar, não preenchia a tela inteira.
+
+<div align="center">
+  <div style="border: 1px solid black;display: inline-block;">
+
+  ![base-apparel-coming-soon background error](./.github/base-apparel-coming-soon-background-error.png)
+
+  </div>
+</div>
+&nbsp;
+
+Para corrigir, verifico se a pagina criou o scroll, caso tenha criado, mudo o height do body para 100%, caso o contrário deixo o height com 100vh.
 
 [Voltar ao início](#top)
 

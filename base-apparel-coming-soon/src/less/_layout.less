@@ -1,0 +1,142 @@
+.container {
+  display: grid;
+  max-width: 144rem;
+  width: 100%;
+  grid: 'logo image' 15rem 'content image' / 1fr;
+
+  .logo {
+    grid-area: logo;
+    margin-top: 6.5rem;
+    margin-left: 7rem;
+  }
+
+  .hero-image {
+    grid-area: image;
+
+    & * {
+      display: block;
+    }
+  }
+
+  .container-content {
+    grid-area: content;
+    position: relative;
+    width: 100%;
+    max-width: 45rem;
+    margin-left: 7rem;
+    margin-top: 8.5rem;
+
+    .title {
+      font-weight: 300;
+      font-size: 6.4rem;
+      text-transform: uppercase;
+      color: @desaturated-red;
+      letter-spacing: 1.8rem;
+
+      span {
+        display: block;
+        color: @dark-grayish-red;
+        font-weight: 600;
+        line-height: 7rem;
+      }
+    }
+
+    p {
+      margin-top: 2rem;
+      color: fade(@desaturated-red, 80%);
+      line-height: 2.7rem;
+    }
+
+    form {
+      margin-top: 4rem;
+      width: 100%;
+      position: relative;
+
+      input {
+        width: 99%;
+        border-radius: 10rem;
+        padding: 0 3rem;
+        height: 5.5rem;
+        border: 0.1rem solid fade(@desaturated-red, 50%);
+        color: fade(@desaturated-red, 60%);
+        background: transparent;
+
+        &::placeholder {
+          color: fade(@desaturated-red, 60%);
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+          box-shadow: 0 0 0 30px transparent inset !important;
+          transition: background-color 5000s ease-in-out 0s;
+          -webkit-text-fill-color: fade(@desaturated-red, 60%) !important;
+        }
+
+        &.error {
+          border-color: @soft-red;
+          border-width: .2rem;
+        }
+      }
+
+      button {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10rem;
+        background: @soft-red-linear;
+        border: 0;
+        width: 23%;
+        height: 5.5rem;
+        top: 0;
+        right: 0;
+
+        &:hover {
+          background: rgb(248, 191, 191);
+          box-shadow: 0 .1rem .5rem rgba(0, 0, 0, 0.2),
+                      0 0.6rem 3.2rem fade(rgb(248, 191, 191), 80%),
+                      0 1.5rem 2.5rem fade(@desaturated-red, 80%);
+        }
+      }
+
+      .input-icon-error {
+        position: absolute;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        top: 5.5rem / 2;
+        right: calc(23% + 3rem);
+        transform: translateY(-50%);
+
+        &.error {
+          display: flex;
+        }
+      }
+
+      .input-text-error {
+        display: block;
+        color: fade(@soft-red, 80%);
+        margin-left: 3rem;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+      }
+    }
+
+    .coded-by {
+      color: @dark-grayish-red;
+      position: absolute;
+      bottom: 1rem;
+
+      a {
+        color: @desaturated-red;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
