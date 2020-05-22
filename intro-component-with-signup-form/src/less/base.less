@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url(../images/bg-intro-desktop.png) @red;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.6rem;
+  padding: 0 3rem;
+
+  &::-webkit-scrollbar-track {
+    background: @white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: @blue;
+  }
+
+  &::-webkit-scrollbar {
+    width: 1.2rem;
+  }
+}
+
+input {
+  cursor: text;
+}
+
+a {
+  text-decoration: none;
+}
+
+button, a, button * {
+  cursor: pointer;
+}
+
+body, input, button {
+  font-family: 'Poppins', sans-serif;
+  color: @white;
+}

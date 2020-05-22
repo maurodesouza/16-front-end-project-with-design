@@ -12,12 +12,14 @@ Meu principal objetivo :dart: com esses projetos é melhorar minhas skills com c
 - [Sass](https://sass-lang.com)
 - [Less](http://lesscss.org)
 - [Gulp](https://gulpjs.com)
-
+- [Webpack](https://webpack.js.org)
+intro-component-with-signup-form
 # Projetos #
 **1°** - [single-price-grid-component-master](#single-price-grid-component-master)\
 **2°** - [four-card-feature-section-master](#four-card-feature-section-master)\
 **3°** - [huddle-landing-page-with-single-introductory-section](#huddle-landing-page-with-single-introductory-section)\
 **4°** - [base-apparel-coming-soon](#base-apparel-coming-soon)
+**5°** - [intro-component-with-signup-form](#intro-component-with-signup-form)
 
 # single-price-grid-component-master #
 
@@ -132,7 +134,7 @@ Para deixar responsivo, passei o `container` para *display flex* com `flex-direc
 
 Para fazer a parte da 'mensagem de erro', adicionei um *event listener* de *submit* no form, que verifica se a formatação do email está correta através de uma regex `/\S+@\S+\.\S+/`, e também se o input esta vazio. Se cair em alguma dessas verificações, é adicionado uma classe de 'erro' no input.
 
-![base-apparel-coming-soon input error git](./.github/base-apparel-coming-soon-input-error.gif)
+![base-apparel-coming-soon input error git](./.github/Base-Apparel-coming-soon-input-error.gif)
 
 Também criei um script para corrigir a imagem de background que coloquei no body, que dependendo se tinha ou não scrollbar, não preenchia a tela inteira.
 
@@ -146,6 +148,38 @@ Também criei um script para corrigir a imagem de background que coloquei no bod
 &nbsp;
 
 Para corrigir, verifico se a pagina criou o scroll, caso tenha criado, mudo o height do body para 100%, caso o contrário deixo o height com 100vh.
+
+[Voltar ao início](#top)
+
+# intro-component-with-signup-form #
+
+![Design intro-component-with-signup-form](./intro-component-with-signup-form/design/desktop-preview.jpg)
+
+Para o quinto projeto, temos esse layout acima :arrow_up::arrow_up: e suas especificações eram:
+
+- Deixar o layout responsivo;
+- Colocar um efeito de **Hover** em todos os elementos interativos;
+- Receber uma mensagem de erro no submit do form se:
+  - O campo do input estiver vazio;
+  - O email não tiver formatado corretamente;
+
+Para fazer ele, utilizei o [Webpack](https://webpack.js.org) e para os estilos, o [Less](http://lesscss.org) :+1::+1:
+
+Para ver como ficou o resultado, [clique aqui](https://maurodesouza.github.io/16-front-end-project-with-design/intro-component-with-signup-form/dist/index.html) :point_left::point_left:
+
+Se quiser ver como ficaram os arquivos, [clique aqui](https://github.com/maurodesouza/16-front-end-project-with-design/tree/master/intro-component-with-signup-form/src) :point_left::point_left:
+
+![intro-component-with-signup-form app](./.github/intro-component-with-signup-form.gif)
+
+Para fazer ele, utilizei uma `section(container)` com um *max-width 1100px* para deixar todo conteúdo centralizado e também usei um *display flex* para colocar os textos e o formulário lado a lado.
+
+Para deixar responsivo, adicionei ao `container` um `flex-direction column` :ok_hand::ok_hand:
+
+Para fazer a parte da 'mensagem de erro', adicionei um *event listener* de *submit* no form, que verifica se a formatação do email está correta através de uma regex `/\S+@\S+\.\S+/`, e também se cada input esta vazio. Se cair em alguma dessas verificações, é adicionado uma classe de 'erro' no input e também é colocado um span em baixo do input contendo a mensagem de erro.
+
+![intro-component-with-signup-form input error git](./.github/intro-component-with-signup-form-input-error.png)
+
+Também criei um script para fazer os inputs do formulário :+1::+1:
 
 [Voltar ao início](#top)
 
