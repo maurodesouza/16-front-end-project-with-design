@@ -1,0 +1,69 @@
+.container-toggle {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+
+  .text-toggle-option {
+    color: @lightGrayishBlue;
+  }
+
+  .toggle-item {
+    position: relative;
+    display: inline-block;
+    width: 5.6rem;
+    height: 3.2rem;
+    margin: 0 2.5rem;
+
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+
+      &:checked + .toggle-slide::after {
+        transform: translateX(2.4rem);
+      }
+    }
+  }
+
+  .toggle-slide {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    cursor: pointer;
+    border-radius: 10rem;
+    z-index: 1;
+    .blueGradient();
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: opacity .4s;
+      z-index: -1;
+      background: lighten(@blue, 15%);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2.4rem;
+      width: 2.4rem;
+      background: @veryLightGrayishBlue;
+      top: .4rem;
+      left: .4rem;
+      border-radius: 10rem;
+      transition: all .4s;
+    }
+  }
+}

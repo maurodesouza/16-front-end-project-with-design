@@ -1,0 +1,63 @@
+@media screen and (max-width: 1080px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  html {
+    font-size: 8.5px;
+  }
+
+  body {
+    background-size: 30% 100%, 40% 60%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  html {
+    font-size: 7.5px;
+  }
+
+  body {
+    background-size: 30% 100%, 40% 70%;
+  }
+
+  .card .card-price {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 7px;
+  }
+
+  body {
+    background-size: 50% 100%, 0% 0%;
+  }
+
+  .cards {
+    flex-direction: column;
+    max-width: 30rem;
+  }
+
+  .card {
+    width: 100%;
+
+    & + .card {
+      margin-top: 3rem;
+    }
+  }
+
+  .card.card-left,
+  .card.card-right {
+    border-radius: 1rem;
+  }
+}

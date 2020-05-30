@@ -18,8 +18,9 @@ intro-component-with-signup-form
 **1°** - [single-price-grid-component-master](#single-price-grid-component-master)\
 **2°** - [four-card-feature-section-master](#four-card-feature-section-master)\
 **3°** - [huddle-landing-page-with-single-introductory-section](#huddle-landing-page-with-single-introductory-section)\
-**4°** - [base-apparel-coming-soon](#base-apparel-coming-soon)
-**5°** - [intro-component-with-signup-form](#intro-component-with-signup-form)
+**4°** - [base-apparel-coming-soon](#base-apparel-coming-soon)\
+**5°** - [intro-component-with-signup-form](#intro-component-with-signup-form)\
+**6°** - [pricing-component-with-toggle](#pricing-component-with-toggle)
 
 # single-price-grid-component-master #
 
@@ -180,6 +181,31 @@ Para fazer a parte da 'mensagem de erro', adicionei um *event listener* de *subm
 ![intro-component-with-signup-form input error git](./.github/intro-component-with-signup-form-input-error.png)
 
 Também criei um script para fazer os inputs do formulário :+1::+1:
+
+[Voltar ao início](#top)
+
+# pricing-component-with-toggle #
+
+![Design pricing-component-with-toggle](./pricing-component-with-toggle/design/desktop-preview.jpg)
+
+Para o sexto projeto, temos esse layout acima :arrow_up::arrow_up: e suas especificações eram:
+
+- Deixar o layout responsivo;
+- Poder controlar o botão de toggle com o mouse ou teclado;
+
+Para fazer ele, utilizei o [Webpack](https://webpack.js.org) e para os estilos, o [Less](http://lesscss.org) :+1::+1:
+
+Para ver como ficou o resultado, [clique aqui](https://maurodesouza.github.io/16-front-end-project-with-design/pricing-component-with-toggle/dist/index.html) :point_left::point_left:
+
+Se quiser ver como ficaram os arquivos, [clique aqui](https://github.com/maurodesouza/16-front-end-project-with-design/tree/master/pricing-component-with-toggle/src) :point_left::point_left:
+
+![pricing-component-with-toggle app](./.github/pricing-component-with-toggle.gif)
+
+Para fazer o toggle, usei [esse](https://www.w3schools.com/howto/howto_css_switch.asp) tutorial da w3schools :ok_hand::ok_hand:
+
+Nos botões dos cards brancos tem um negócio que achei bem interessante, como o background deles é feito com *linear-gradient*, fazer um efeito de ``hover`` para mudar a cor de fundo com um ``transition`` não funcionava, a cor mudava, mas sem a transição.
+
+Então procurando um pouco na internet, encontrei essa solução [aqui](https://stackoverflow.com/questions/17952468/css-background-gradient-transition-not-working) para conseguir utilizar o ``transition`` com *linear-gradient*, basicamente é criar um ``pseudo-element`` com o *after* ou *before* e no ``hover`` mudar a opacidade desse ``pseudo-element`` :tada::tada:
 
 [Voltar ao início](#top)
 
