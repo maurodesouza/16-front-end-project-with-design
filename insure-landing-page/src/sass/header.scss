@@ -1,0 +1,80 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8.1rem;
+  width: 100%;
+  max-width: 110rem;
+  margin: 0 auto;
+  z-index: 1;
+
+  .menu-mobile-icon {
+    border: .2rem solid $veryDarkViolet;
+    padding: 1rem .8rem;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+
+    & * {
+      cursor: pointer;
+    }
+
+    span {
+      transition: .4s;
+      width: 2.3rem;
+      height: 2px ;
+      background: $veryDarkViolet;
+
+      & + span {
+        margin-top: .6rem;
+      }
+    }
+  }
+
+  img {
+    cursor: pointer;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  li {
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+
+    &:hover a {
+      color: $veryDarkViolet;
+    }
+
+    &:last-child {
+      padding: 1rem 1.5rem;
+      border: .2rem solid fade-out($veryDarkViolet, 0.12);
+      margin-left: 2rem;
+      transition: .4s;
+      cursor: pointer;
+
+      &:hover {
+        background: $veryDarkViolet;
+
+        a {
+          color: $veryLightGray;
+        }
+      }
+
+      a {
+        color: $veryDarkViolet;
+      }
+    }
+  }
+
+  a {
+    padding: 1.5rem;
+    color: $darkGrayishViolet;
+  }
+}

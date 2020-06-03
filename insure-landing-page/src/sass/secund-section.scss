@@ -1,0 +1,45 @@
+.secund-section-content {
+  @include container;
+  margin-top: 30rem;
+  position: relative;
+  overflow: auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 14%;
+    height: .1rem;
+    background: fade-out($darkGrayishViolet, .2); 
+  }
+
+  h2 {
+    font-size: 7rem;
+    margin-top: 5rem;
+  }
+
+  ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 7rem;
+  }
+
+  li {
+    width: max(32%, 30.6rem);
+
+    & + li {
+      margin-left: 1.5rem;
+    }
+
+    h3 {
+      font-size: 2.8rem;
+      margin-top: 2rem;
+    }
+
+    p {
+      color: $darkGrayishViolet;
+      line-height: 2.6rem;
+      margin-top: 2rem;
+    }
+  }
+}

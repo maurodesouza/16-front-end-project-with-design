@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  cursor: default;
+}
+
+html {
+  font-size: 10px;
+  min-height: 100vh;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  padding: 0 3rem;
+
+  &::-webkit-scrollbar {
+    width: 1.2rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $veryDarkViolet;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+button, body {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.6rem;
+}
+
+
+h1, h2, h3 {
+  font-family: 'DM Serif Display', serif;
+  font-weight: normal;
+  color: $veryDarkViolet;
+}

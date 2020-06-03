@@ -1,0 +1,91 @@
+.intro-img-mobile {
+  display: none;
+}
+
+.intro-bg {
+  background: $darkViolet;
+  width: calc(100% + 6rem);
+  height: 100%;
+  padding: 12rem 3rem 15rem;
+  position: relative;
+  margin-left: -3rem;
+
+  &::before {
+    content: url(../images/bg-pattern-intro-left-desktop.svg);
+    position: absolute;
+    top: 70%;
+    left: 0;
+  }
+
+  &::after {
+    content: url(../images/bg-pattern-intro-right-desktop.svg);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.intro-content {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  color: $veryLightGray;
+  padding-top: 5rem;
+
+  & > div {
+    width: 100%;
+    max-width: 50%;
+
+    &::before {
+      content: '';
+      width: 14%;
+      height: .1rem;
+      background: $veryLightGray;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  & > img {
+    width: 100%;
+    max-width: 48%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+
+  h1 {
+    line-height: 7rem;
+    font-size: 7rem;
+    color: $veryLightGray;
+  }
+
+  p {
+    margin-top: 3rem;
+    color: fade-out($veryLightGray, .2);
+    line-height: 2.5rem;
+  }
+
+  button {
+    border: .2rem solid $veryLightGray;
+    color: fade-out($veryLightGray, .2);
+    background: transparent;
+    text-transform: uppercase;
+    height: 4rem;
+    width: 15rem;
+    letter-spacing: .1rem;
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: .4s;
+
+    &:hover {
+      color: $darkViolet;
+      background: $veryLightGray;
+    }
+  }
+}
