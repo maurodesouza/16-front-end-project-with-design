@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+html {
+  min-height: 100vh;
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: #fdfdfd;
+  color: #111;
+  font-size: 1.6rem;
+  padding: 0 3rem 3rem;
+}
+
+body::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #111;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fdfdfd;
+}
+
+h1 {
+  margin: 5rem 0;
+  font-size: 5rem;
+  line-height: 5.5rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.list-projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 129rem;
+}
+
+.list-item, .list-item img {
+  width: 35rem;
+  max-width: 100%;
+}
+
+.list-item img {
+  display: block;
+  cursor: pointer;
+}
+
+.list-item {
+  list-style: none;
+  margin: 2.5rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  transition: .4s;
+  background: #fff;
+  box-shadow: 0 .4rem 2rem rgba(0, 0, 0, .4);
+}
+
+.list-item:hover {
+  transform: scale(1.1);
+}
+
+.list-item a {
+  text-decoration: none;
+}
+
+.list-item h2 {
+  color: #111;
+  font-size: 1.2rem;
+  margin: 1rem;
+}
