@@ -14,4 +14,4 @@ Meu principal objetivo :dart: com esses projetos é melhorar minhas skills com c
 - [Gulp](https://gulpjs.com)
 - [Webpack](https://webpack.js.org)
 
-Você pode encontrar os projetos [clicando aqui](https://maurodesouza.github.io/16-front-end-project-with-design) :point_left::point_left:
+Você pode encontrar os projetos [clicando aqui](https://maurodesouza.github.io/16-front-end-project-with-design/index.html) :point_left::point_left:

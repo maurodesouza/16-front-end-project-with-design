@@ -16,8 +16,8 @@ projects.forEach((project, index) => {
   const li = document.createElement('li');
 
   li.innerHTML = `
-    <a href="/${project}/dist/index.html" target="_blank">
-      <img src="/${project}/design/desktop-preview.jpg" />
+    <a href="/16-front-end-project-with-design/${project}/dist/index.html" target="_blank">
+      <img src="/16-front-end-project-with-design/${project}/design/desktop-preview.jpg" />
       <h2>${index + 1}. ${formatProjectName(project)}</h2>
     </a>
   `
