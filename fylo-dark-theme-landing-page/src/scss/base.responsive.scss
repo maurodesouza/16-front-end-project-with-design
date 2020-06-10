@@ -1,0 +1,23 @@
+@media screen and (max-width: 780px) {
+  body {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 9.5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 8px;
+  }
+}

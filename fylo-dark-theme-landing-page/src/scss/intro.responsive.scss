@@ -1,0 +1,28 @@
+@media screen and (max-width: 715px) {
+  .intro-section-content h1 br {
+        display: none;
+  }
+}
+
+@media screen and (max-width: 515px) {
+  .intro-section-bg {
+    background-position-x: 55%;
+    padding-bottom: 12rem;
+  }
+
+  .intro-section-content {
+    h1 {
+      font-size: 3.5rem;
+      line-height: 5.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .intro-section-content {
+    h1 {
+      font-size: 2.8rem;
+      line-height: 4.8rem;
+    }
+  }
+}

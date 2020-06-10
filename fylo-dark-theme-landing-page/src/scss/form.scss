@@ -1,0 +1,50 @@
+.form-container {
+  @include container;
+  position: relative;
+
+  max-width: 90rem;
+  border-radius: 1rem;
+  padding: 5rem 7rem 4rem;
+
+  background: $DarkBlueIntro;
+  top: 10rem;
+  box-shadow: .8rem .6rem .4rem rgba(0, 0, 0, .2);
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  p {
+    max-width: 90%;
+    margin: 3rem auto;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+  }
+
+  input {
+    width: 100%;
+    height: 5rem;
+    padding: 0 4rem;
+    border-radius: 10rem;
+    border: 0;
+    color: fade-out($DarkBlueFooter, .4);
+
+    &::placeholder {
+      color: fade-out($DarkBlueFooter, .6);
+    }
+  }
+
+  button {
+    background: linear-gradient(to right, $Cyan, $Blue);
+    border: 0;
+    border-radius: 10rem;
+    width: 38%;
+    height: 5rem;
+    margin-left: 3rem;
+
+    @include button-hover-effect($DarkBlueIntro);
+  }
+}

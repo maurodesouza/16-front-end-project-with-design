@@ -1,0 +1,45 @@
+.intro-section-bg {
+  background: url(../images/bg-curvy-desktop.svg) no-repeat center bottom;
+  width: calc(100% + 6rem);
+  margin-left: -3rem;
+  padding: 0 3rem 20rem;
+}
+
+.intro-section-content {
+  @include container;
+
+  margin-top: 6rem;
+
+  img {
+    width: 100%;
+    max-width: 72rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 6rem;
+    margin-top: 3rem;
+  }
+
+  p {
+    margin: 0 auto;
+    font-size: 2rem;
+    line-height: 3rem;
+    max-width: 60rem;
+    margin-top: 3.5rem;
+  }
+
+  button {
+    @include button-hover-effect($DarkBlueMain);
+
+    height: 5rem;
+    font-size: 1.6rem;
+    background: linear-gradient(to right, $Cyan, $Blue);
+    border: 0;
+    width: 100%;
+    max-width: 26rem;
+    border-radius: 10rem;
+    margin-top: 3rem;
+    overflow: hidden;
+  }
+}

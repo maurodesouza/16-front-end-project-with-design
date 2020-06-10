@@ -1,0 +1,49 @@
+.section-stay-productive {
+  @include container;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+
+  & > div {
+    text-align: left;
+    margin-left: 5rem;
+
+    h2 {
+      font-size: 4rem;
+      margin-bottom: 2.5rem;
+    }
+
+    p {
+      margin-top: 1.5rem;
+      font-size: 1.6rem;
+      max-width: 95%;
+    }
+
+    a {
+      display:  inline-flex;
+      align-items: center;
+      margin-top: 2.5rem;
+      color: fade-out($Cyan, .2);
+      font-size: 1.6rem;
+      padding-bottom: .5rem;
+      border-bottom: .1rem solid;
+      will-change: color;
+      transition: color .4s;
+
+      &:hover {
+        color: $Cyan;
+      }
+    }
+
+    img {
+      margin-left: 1rem;
+    }
+  }
+
+  & > img {
+    width: 100%;
+    max-width: 61.5rem;
+  }
+}

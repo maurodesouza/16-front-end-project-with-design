@@ -1,0 +1,38 @@
+$DarkBlueIntro: rgb(28, 36, 49);
+$DarkBlueMain: rgb(24, 31, 42);
+$DarkBlueFooter: rgb(11, 21, 35);
+$DarkBlueTestimonials: rgb(32, 42, 60);
+
+$Cyan: rgb(101, 226, 217);
+$Blue: rgb(51, 158, 204);
+
+$White: rgb(255, 255, 255);
+
+@mixin container {
+  width: 100%;
+  max-width: 125rem;
+  margin: 0 auto;
+}
+
+@mixin button-hover-effect($color-bg) {
+  position: relative;
+  z-index: 1;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: .1rem;
+    bottom: .1rem;
+    left: .1rem;
+    right: .1rem;
+    background: $color-bg;
+    opacity: 0;
+    border-radius: 10rem;
+    transition: .4s;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}

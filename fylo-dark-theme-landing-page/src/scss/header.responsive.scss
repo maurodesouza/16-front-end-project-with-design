@@ -1,0 +1,24 @@
+@media screen and (max-width: 560px) {
+  header {
+
+    li + li {
+      margin-left: 0;
+    }
+    
+    img {
+      max-width: 12rem;
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  header {
+    a {
+      font-size: 1.2rem;
+    }
+
+    img {
+      max-width: 9.5rem;
+      margin-right: 1.5rem;
+    }
+  }
+}
