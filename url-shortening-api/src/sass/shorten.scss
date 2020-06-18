@@ -1,0 +1,135 @@
+.shorten {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: min(5rem, 4.3vw) min(7rem, 6vw);
+  border-radius: 1rem;
+  background: $darkViolet url(../images/bg-shorten-desktop.svg) no-repeat bottom;
+  transform: translateY(50%);
+
+  form {
+    display: flex;
+    width: 100%;
+
+    &.error {
+      input {
+        border: .3rem solid $red;
+
+        &::placeholder {
+          color: $red;
+        }
+      }
+
+      .input-error-text {
+        display: block;
+      }
+    }
+  }
+
+  input {
+    height: clamp(5.2rem, 5.6vw, 6.5rem);
+    border: 0;
+    border-radius: 1rem;
+    padding: 0 clamp(2.4rem, 2.6vw, 3rem);
+    font-size: clamp(1.6rem, 1.7vw, 2rem);
+    width: 100%;
+    color: $grayishViolet;
+
+    &::placeholder {
+      color: $grayishViolet;
+    }
+  }
+
+  .input-wrapper {
+    width: 78%;
+  }
+
+  .input-error-text {
+    display: none;
+    color: $red;
+    font-size: 1.6rem;
+    font-style: italic;
+    margin-top: .5rem;
+    margin-bottom: -2.5rem;
+  }
+
+  button {
+    width: 20%;
+    border-radius: 1rem;
+    font-size: clamp(1.6rem, 1.7vw, 2rem);
+    margin-left: auto;
+    height: clamp(5.2rem, 5.6vw, 6.5rem);
+
+    &:disabled {
+      background: lighten($cyan, 20%);
+      cursor: not-allowed;
+    }
+  }
+}
+
+.shorten-results {
+  width: 100%;
+
+  .shorten-result {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: $white;
+    padding: clamp(1.2rem ,1.3vw ,1.5rem) clamp(1.2rem, 2.1vw, 2.5rem);
+    border-radius: .5rem;
+
+    & + .shorten-result {
+      margin-top: clamp(1.6rem, 1.7vw, 2rem);
+    }
+
+    & > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .original-link {
+    display: block;
+    overflow: hidden;
+    margin-right: 1.5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $veryDarkBlue;
+    flex: 1;
+    
+    a {
+      cursor: default;
+      color: $veryDarkBlue;
+      font-size: clamp(1.6rem, 1.7vw, 2rem);
+    }
+  }
+
+  .shorten-link {
+    display: block;
+   
+    a {      
+      font-size: clamp(1.6rem, 1.7vw, 2rem);
+      color: $cyan;
+
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  button {
+    width: clamp(9rem, 8.6vw, 10rem,);
+    height: clamp(3.6rem, 3.4vw, 4rem);
+    margin-left: clamp(1.8rem, 1.7vw, 2rem);
+    border-radius: .5rem;
+    font-size: 1.4rem;
+
+    &.link-copied {
+      background: $darkViolet;
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+  }
+}

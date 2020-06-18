@@ -1,0 +1,53 @@
+header {
+  @include container;
+
+  font-weight: bold;
+  font-size: clamp(1.2rem ,1.3vw ,1.5rem);
+  padding: clamp(4rem, 4.3vw, 5rem) 0;
+
+  .logo-header-wrapper {
+    margin-right: clamp(3.2rem, 3.47vw, 4rem);
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 12.1rem;
+    min-width: 12.1rem;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-nav-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+
+    @include hover('a') {
+      color: $veryDarkBlue;
+    }
+
+    & + li {
+      margin-left: clamp(2.4rem, 2.6vw, 3rem);
+    }
+
+    &:nth-child(4) {
+      margin-left: auto;
+    }
+  }
+
+  .sign-up-button {
+    font-size: clamp(1.2rem ,1.3vw ,1.5rem);
+    width: clamp(8.8rem , 9.5vw, 11rem);
+    height: clamp(3.2rem, 3.4vw, 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+  }
+}

@@ -1,0 +1,25 @@
+.boost {
+  background: $darkViolet url(../images/bg-boost-desktop.svg) no-repeat center center;
+  width: calc(100% + 6rem);
+  margin-left: -3rem;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 25rem;
+
+  h2 {
+    text-align: center;
+    color: $white;
+    font-size: clamp(2.6rem, 3.4vw, 4rem);
+  }
+
+  button {
+    margin-top: 2rem;
+    width: clamp(18rem, 17.3vw, 20rem);
+    height: clamp(4.8rem, 5.2vw, 6rem);
+    border-radius: 10rem;
+    font-size: clamp(1.6rem, 1.7vw, 2rem);
+  }
+}

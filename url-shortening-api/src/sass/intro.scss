@@ -1,0 +1,38 @@
+.intro {
+  display: flex;
+  align-items: center;
+  margin-top: min(4rem, 3.4vw) !important;
+
+  img {
+    width: 100%;
+    max-width: clamp(40rem, 63.7vw, 73.3rem);
+  }
+}
+
+.intro-content {
+  min-width: min(66rem, 50.7vw);
+
+  h1 {
+    font-size: clamp(4rem, 6.9vw, 8rem);
+    line-height: clamp(4.5rem, 7.8vw, 9rem);
+    letter-spacing: -.3rem;
+
+    & > br {
+      display: none;
+    }
+  }
+
+  p {
+    color: $grayishViolet;
+    font-size: clamp(1.3rem, 1.9vw, 2.2rem);
+    line-height: clamp(2.1rem, 3vw, 3.5rem);
+  }
+
+  button {
+    font-size: clamp(1.6rem, 1.7vw, 2rem);
+    margin-top: clamp(3.2rem, 3.4vw, 4rem);
+    border-radius: 10rem;
+    width: clamp(16rem, 17.3vw, 20rem);
+    height: clamp(4.4rem, 4.7vw, 5.5rem);
+  }
+}

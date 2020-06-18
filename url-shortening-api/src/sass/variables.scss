@@ -1,0 +1,36 @@
+$cyan: rgb(42, 207, 207);
+$darkViolet: rgb(59, 48, 84);
+
+$red: rgb(220, 108, 122);
+
+$white: rgb(255, 255, 255);
+
+$grayishBlue: rgb(240, 241, 246);
+$gray: rgb(191, 191, 191);
+$grayishViolet: rgb(158, 154, 167);
+$veryDarkBlue: rgb(53, 50, 62);
+$veryDarkViolet: rgb(35, 33, 39);
+
+@mixin container {
+  width: 100%;
+  max-width: 110rem;
+  margin: 0 auto;
+}
+
+@mixin breakpoint($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  };
+};
+
+@mixin hover($element: '') {
+  @media not all and (pointer: coarse) {
+    &:hover #{$element}, &:active #{$element} {
+      @content;
+    };
+  };
+};
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+};

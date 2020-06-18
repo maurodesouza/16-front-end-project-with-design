@@ -1,0 +1,80 @@
+.statistics {
+  position: relative;
+  margin-top: clamp(7rem, 10.4vw, 12rem);
+
+  & > h2 {
+    font-size: clamp(2.6rem, 3.4vw, 4rem);
+    text-align: center;
+    letter-spacing: -.1rem;
+  }
+
+  & > p {
+    margin-top: min(1.5rem, 1.3vw);
+    text-align: center;
+    color: fade-out($grayishViolet, .1);
+  }
+
+  & > div {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: clamp(9rem, 13vw, 15rem);
+
+    .cyan-line {
+      position: absolute;
+      background: $cyan;
+      width: 100%;
+      height: clamp(.8rem, .8vw, 1rem);
+      top: 50%;
+    }
+  }
+}
+
+.statistic {
+  position: relative;
+  background: $white;
+  border-radius: .5rem;
+  padding: min(8rem, 6.9vw) min(3rem, 2.6vw) min(3rem, 2.6vw);
+  box-shadow: -.15rem -.15rem 1rem rgba(0, 0, 0, .05);
+  z-index: 2;
+
+  & + .statistic {
+    margin-left: min(3rem, 2.6vw);
+  }
+
+  &:nth-child(2) {
+    top: min(4rem, 3.4vw);
+  }
+
+  &:nth-child(3) {
+    top: min(8rem, 6.9vw);
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(6.8rem, 7.3vw, 8.5rem);
+    height: clamp(6.8rem, 7.3vw, 8.5rem);
+    border-radius: 10rem;
+    background: $darkViolet;
+    position: absolute;
+    top: clamp(-3.2rem, -3.45vw, -4rem);
+  }
+
+  img {
+    width: 100%;
+    max-width: clamp(3.84rem, 4.1vw, 4.8rem);
+  }
+
+  h3 {
+    font-size: clamp(1.76rem, 2.2rem, 1.9vw);
+  }
+
+  p {
+    margin-top: min(1.5rem, 1.3vw);
+    color: fade-out($grayishViolet, .1);
+    font-size: clamp(1.2rem ,1.3vw ,1.5rem);
+    line-height: clamp(2rem, 2.1vw, 2.5rem);
+  }
+}

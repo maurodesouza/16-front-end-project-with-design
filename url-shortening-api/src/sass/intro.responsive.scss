@@ -1,0 +1,33 @@
+@include breakpoint(630px) {
+  .intro {
+    flex-direction: column;
+    margin-top: 0 !important;
+
+    img {
+      min-width: 40rem;
+      position: absolute;
+      right: -10rem;
+      order: -1;
+    }
+  }
+
+  .intro-content {
+    margin-top: 30rem;
+    text-align: center;
+
+    h1 br {
+      display: initial;
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      max-width: 34rem;
+      margin: 1rem auto 0;
+
+      & > br {
+        display: none;
+      }
+    }
+  }
+}

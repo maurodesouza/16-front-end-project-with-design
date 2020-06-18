@@ -6,7 +6,8 @@ const projects = [
   'intro-component-with-signup-form',
   'pricing-component-with-toggle',
   'insure-landing-page',
-  'fylo-dark-theme-landing-page'
+  'fylo-dark-theme-landing-page',
+  'url-shortening-api'
 ];
 
 const list = document.querySelector('.list-projects');

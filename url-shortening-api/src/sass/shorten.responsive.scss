@@ -1,0 +1,72 @@
+@include breakpoint(768px) {
+  .shorten-results {
+
+    .shorten-result {
+      flex-direction: column;
+      align-items: initial;
+  
+      & > div {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  
+    .original-link {
+      width: calc(100% + 2.4rem);
+      padding: 0 1.2rem 1.2rem;
+      margin-left: -1.2rem;
+      margin-bottom: 1.2rem;
+      margin-right: 0;
+      border-bottom: .1rem solid fade-out($gray, .6);
+    }
+  }
+}
+
+@include breakpoint(650px) {
+  .shorten {
+    form {
+      flex-direction: column;
+    }
+
+    .input-wrapper {
+      width: 100%;
+    }
+
+    .input-error-text {
+      margin-bottom: 0rem;
+    }
+
+    button {
+      width: 100%;
+      height: 5.2rem;
+      margin-top: 1.5rem;
+    }
+  }
+
+  .shorten-results {
+    margin-top: 1.2rem;
+  }
+}
+
+@include breakpoint(400px) {
+  .shorten {
+    background-image: url(../images/bg-shorten-mobile.svg) ;
+    background-position: bottom right;
+  }
+
+  .shorten-result {
+    & > div {
+      flex-direction: column;
+    }
+
+    .shorten-link {
+      width: 100%;
+    }
+
+    button {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 1.2rem;
+    }
+  }
+}
