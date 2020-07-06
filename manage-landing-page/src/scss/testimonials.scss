@@ -1,0 +1,92 @@
+.testimonials {
+  width: calc(100% + 6rem);
+  margin-left: -3rem;
+  margin-top: fluid(6rem, 16rem, 980px);
+  text-align: center;
+  overflow-x: hidden;
+
+  h2 {
+    font-size: fluid(3rem, 4.5rem, 980px);
+  }
+
+  button {
+    margin-top: 4.5rem;
+    margin-bottom: fluid(4rem, 18rem, 980px);
+  }
+}
+
+.slider {
+  margin-top: 12rem;
+  cursor: grab;
+
+  & * {
+    cursor: grab;
+  }
+}
+
+.slider-wrapper {
+  display: flex;
+
+  & > * {
+    flex-shrink: 0;
+  }
+}
+
+.slider-item {
+  position: relative;
+  width: 54rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $lightGray;
+  border-radius: .5rem;
+
+  padding: 7rem fluid(2.8rem, 4.1rem, 780px) 4rem;
+
+  & + .slider-item {
+    margin-left: 3rem;
+  }
+
+  .avatar {
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 10rem;
+    top: -3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  strong {
+    display: block;
+    color: $blue;
+  }
+
+  cite {
+    display: block;
+    margin-top: 3rem;
+    max-width: 46rem;
+  }
+}
+
+.slider-nav-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+
+  .slider-nav {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 10rem;
+    border: .2rem solid $red;
+
+    & + .slider-nav {
+      margin-left: .3rem;
+    }
+
+    &.current {
+      background-color: $red;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@include breakpoint(750px) {
+  .simplify-content {
+    text-align: center;
+    flex-direction: column;
+
+    h2 {
+      max-width: 50rem;
+
+      br {
+        display: none;
+      }
+    } 
+
+    button {
+      margin-top: 4rem;
+    }
+  }
+}
+
+@include breakpoint(400px) {
+  .simplify-bg {
+    padding: 10rem 3rem 9rem;
+
+    &::after {
+      content: url(../images/bg-simplify-section-mobile.svg);
+      transform: translateX(0);
+      display: initial;
+      top: 5rem;
+    }
+  }
+
+  .simplify-content h2 {
+    max-width: 26rem;
+  }
+}

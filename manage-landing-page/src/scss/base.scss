@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  cursor: default;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, .0);
+}
+
+html {
+  font-size: 10px;
+  width: 100%;
+  overflow: overlay;
+  overflow-x: hidden;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-size: fluid(1.4rem, 1.6rem, 980px);
+  padding: 0 3rem;
+  width: 100%;
+  position: relative;
+  overflow: overlay;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 1.2rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $red;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, .3);
+  }
+}
+
+a, body {
+  color: $grayishBlue;
+}
+
+body, button, input {
+  font-family: 'Be Vietnam', sans-serif;
+}
+
+h1, h2, h3 {
+  color: $blue;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  width: 13.5rem;
+  height: 4.5rem;
+  border-radius: 100rem;
+  border: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: .05rem;
+  box-shadow: 0 1.5rem 2rem -1rem fade-out($red, .3);
+
+  @include hover(':not(.bg-light)') {
+    background-color: lighten($red, 15%);
+  };
+}
+
+a, button, .logo {
+  cursor: pointer;
+}
+
+input {
+  cursor: text;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: fluid(1rem, 1.2rem, 780px);
+}
+
+button.bg-light {
+  box-shadow: none;
+
+  @include hover {
+    color: lighten($red, 20%);
+  };
+}
+
+.bg-red {
+  background-color: $red;
+  color: fade-out($lightGray, .1);
+}
+
+.bg-light {
+  background-color: $lightGray;
+  color: fade-out($red, .1);
+}

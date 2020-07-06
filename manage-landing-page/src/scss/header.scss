@@ -1,0 +1,36 @@
+header {
+  @extend .container;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: fluid(4rem, 5rem, 1150px) 0 fluid(5rem, 11.5rem, 1150px);
+
+  .logo {
+    position: relative;
+    top: .7rem;
+    width: fluid(11.5rem, 15rem, 900px);
+  }
+
+  .menu-nav-links {
+    ul {
+      display: flex;
+      align-items: center;
+    }
+
+    li {
+      padding: 1.6rem;
+      font-weight: bold;
+    }
+
+    a {
+      color: $blue;
+      letter-spacing: .05rem;
+  
+      @include hover {
+        color: $grayishBlue;
+      }
+    }
+  }
+}

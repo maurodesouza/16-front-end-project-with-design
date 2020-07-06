@@ -1,0 +1,152 @@
+.footer-bg {
+  background: $darkBlue;
+  width: calc(100% + 6rem);
+  margin-left: -3rem;
+  padding: 6rem 3rem 2rem;
+}
+
+.footer-content {
+  @extend .container;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-wrapper-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &.logo-socia-icons {
+    order: 1;
+  }
+
+  &.form-copyright {
+    order: 3;
+  }
+}
+
+.logo {
+  width: 16rem;
+}
+
+.social-icons {
+  margin-top: 8rem;
+
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    & * {
+      cursor: pointer;
+    }
+
+    & + li {
+      margin-left: 1.5rem;
+    }
+  }
+
+  i {
+    font-size: 2.2rem;
+    color: $lightGray;
+
+    @include hover {
+      color: $red;
+    }
+  }
+}
+
+.footer-nav-links {
+  order: 2;
+
+  li + li {
+    margin-top: 1.5rem;
+  }
+
+  a {
+    line-height: 0;
+    font-size: 1.4rem;
+    color: fade-out($lightGray, 0.2);
+
+    @include hover {
+      color: $red;
+    };
+  }
+}
+
+.form {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 20rem;
+  }
+
+  input {
+    width: 100%;
+
+    height: 4.5rem;
+    border-radius: 10rem;
+    border: .1rem solid transparent;
+    padding: 0 2rem;
+    color: $grayishBlue;
+
+    &::placeholder {
+      color: $grayishBlue;
+    }
+  }
+
+  .input-error-text {
+    display: none;
+    color: $red;
+    padding-left: 2rem;
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  button {
+    flex-shrink: 0;
+    width: 6.5rem;
+    margin-left: 1rem;
+    box-shadow: none;
+  }
+}
+
+.copyright {
+  width: 100%;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.coded-by {
+  margin-top: 15rem;
+  text-align: center;
+  color: fade-out($lightGray, 0.2);
+
+  a {
+    color: $red;
+    font-size: 1.6rem;
+
+    @include hover {
+      color: lighten($red, 5%);
+    };
+  }
+}
+
+.form.error {
+  input {
+    border-color: $red;
+  }
+  .input-error-text {
+    display: initial;
+  }
+}

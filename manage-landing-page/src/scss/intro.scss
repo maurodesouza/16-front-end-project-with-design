@@ -1,0 +1,24 @@
+.intro {
+  @extend .container;
+
+  display: flex;
+  align-items: center;
+
+  h1 {
+    font-size: fluid(3rem, 5.5rem, 1100px);
+    line-height: fluid(4rem, 6.5rem, 1100px);
+  }
+
+  p {
+    margin-top: fluid(1.5rem, 4rem, 1100px);
+    line-height: 2.5rem;
+  }
+
+  button {
+    margin-top: fluid(3rem, 4.5rem, 1100px);
+  }
+
+  & > * {
+    width: 50%;
+  }
+}

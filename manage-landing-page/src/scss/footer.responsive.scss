@@ -1,0 +1,53 @@
+@include breakpoint(780px) {
+  .footer-content {
+    position: relative;
+    justify-content: center;
+
+    .footer-wrapper-container {
+      flex-basis: 100%;
+      align-items: center;
+
+      &.logo-social-icons {
+        margin-top: 4.5rem;
+        order: 3;
+      }
+      
+      &.form-copyright {
+        order: 1;
+        margin-bottom: 6rem;
+      }
+    }
+
+    .logo {
+      order: 2;
+    }
+
+    .social-icons {
+      order: 1;
+      margin-top: 0;
+      margin-bottom: 5rem;
+
+      li + li {
+        margin-left: 3rem;
+      }
+
+      i {
+        font-size: 3.2rem;
+      }
+    }
+
+    .footer-nav-links.secund {
+      margin-left: 9rem;
+    }
+
+    .form .input-wrapper {
+      max-width: 24rem;
+    }
+
+    .copyright {
+      position: absolute;
+      bottom: -6rem;
+      text-align: center;
+    }
+  }
+}

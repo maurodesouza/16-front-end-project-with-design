@@ -1,0 +1,68 @@
+@include breakpoint(915px) {
+  .features-section {
+    flex-direction: column;
+    align-items: center;
+
+    & > * {
+      width: 100%;
+    }
+  }
+
+  .features-text {
+    text-align: center;
+    max-width: 32rem;
+  }
+  
+  .features-container {
+    max-width: 35rem;
+    margin-top: 6rem;
+  }
+
+  .feature {
+    grid: 'counter title' 3.8rem 'paragraph paragraph' 1fr / fluid(5rem, 6.5rem, 400px) 1fr;
+
+    h3 {
+      position: relative;
+      z-index: 2;
+
+      &:before {
+        content: '';
+        top: 0;
+        left: -2rem;
+        right: -10rem;
+        bottom: 0;
+        background: linear-gradient(to right, fade-out($red, .9) 90%, transparent) ;
+        position: absolute;
+        z-index: 1;
+      }
+    }
+
+    p {
+      padding-left: 0;
+    }
+  }
+}
+
+@include breakpoint(410px) {
+  .features-text {
+
+    p br{
+      display: none;
+    }
+  }
+
+  .feature {
+
+    .feature-smaller-title {
+      display: initial;
+    }
+
+    .feature-biggler-title {
+      display: none;
+    }
+
+    p {
+      max-width: 100%;
+    }
+  }
+}

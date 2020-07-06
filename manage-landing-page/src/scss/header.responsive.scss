@@ -1,0 +1,11 @@
+@include breakpoint(820px) {
+  .logo {
+    position: static;
+  }
+}
+
+@include breakpoint(780px) {
+  header button {
+    display: none;
+  }
+}

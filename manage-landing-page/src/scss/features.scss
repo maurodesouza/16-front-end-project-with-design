@@ -1,0 +1,62 @@
+.features-section {
+  @extend .container;
+
+  display: flex;
+  margin-top: fluid(10rem, 13rem, 980px);
+
+  & > * {
+    width: 50%;
+  }
+}
+
+.features-text {
+  h2 {
+    font-size: fluid(2.6rem, 3.9rem, 980px);
+    line-height: fluid(3.2rem, 4.5rem, 980px);
+  }
+
+  p {
+    margin-top: fluid(2.5rem, 3.2rem, 980px);
+    line-height: 2.5rem;
+  }
+}
+
+.feature {
+  display: grid;
+  grid: 'counter title' 3.8rem '. paragraph' 1fr / 6.5rem 1fr;
+  
+  & + .feature {
+    margin-top: 4rem;
+  }
+
+  .feature-smaller-title {
+    display: none;
+  }
+
+  h3 {
+    line-height: 3.8rem;
+    font-size: 1.6rem;
+    letter-spacing: -.05rem;
+    padding-left: fluid(1rem, 2.5rem, 900px);
+  }
+
+  p {
+    padding-left: 2.5rem;
+    margin-top: 1.5rem;
+    max-width: 95%;
+    line-height: 2.5rem;
+    grid-area: paragraph;
+  }
+}
+
+.feature-counter {
+  flex-shrink: 0;
+  height: 3.8rem;
+  width: 100%;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  line-height: 0;
+}

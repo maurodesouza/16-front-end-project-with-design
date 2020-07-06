@@ -1,0 +1,28 @@
+@include breakpoint(1600px, 'min') {
+  .slider-item {
+    width: calc(54rem + 10vw);
+    padding-top: calc(7rem + 1vw);
+
+    .avatar {
+      width: calc(7rem + 2vw);
+      height: calc(7rem + 2vw);
+      top: calc((7rem + 2vw) / 2 * -1);
+    }
+  }
+}
+
+@include breakpoint(770px) {
+  .slider-nav-container {
+    display: flex;
+  }
+}
+
+@include breakpoint(580px) {
+  .slider-item {
+    width: 90%;
+
+    & + .slider-nav {
+      margin-left: 10%;
+    }
+  }
+}
